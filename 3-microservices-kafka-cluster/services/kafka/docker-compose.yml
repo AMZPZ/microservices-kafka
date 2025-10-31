@@ -1,6 +1,6 @@
 services:
   kafka-broker-1:
-    image: bitnami/kafka:latest
+    image: bitnami/kafka:3.6
     container_name: kafka-broker-1
     environment:
       KAFKA_ENABLE_KRAFT: "yes"
@@ -19,7 +19,7 @@ services:
     networks:
       - kafka-network
   kafka-broker-2:
-    image: bitnami/kafka:latest
+    image: bitnami/kafka:3.6
     container_name: kafka-broker-2
     environment:
       KAFKA_ENABLE_KRAFT: "yes"
@@ -38,7 +38,7 @@ services:
     networks:
       - kafka-network
   kafka-broker-3:
-    image: bitnami/kafka:latest
+    image: bitnami/kafka:3.6
     container_name: kafka-broker-3
     environment:
       KAFKA_ENABLE_KRAFT: "yes"
@@ -57,7 +57,7 @@ services:
     networks:
       - kafka-network
   kafka-ui:
-    image: provectuslabs/kafka-ui:latest
+    image: provectuslabs/kafka-ui:v0.7.2
     container_name: kafka-ui
     environment:
       KAFKA_CLUSTERS_0_NAME: local-cluster
